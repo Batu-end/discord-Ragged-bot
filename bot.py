@@ -3,8 +3,6 @@ import requests
 import json
 import os
 
-client = discord.Client()
-
 def run_discord_bot():
     TOKEN = 'MTA4MDQxNjY2NTc0Mjg3NjgwMw.G18JAE.ewOtI_aVfMxJS3SenLaeK-0JYqdujoFL8BJ75U'
 
@@ -49,6 +47,7 @@ def run_discord_bot():
     api_key = "fXAagJPL2EA8yvLp2Dpx9SbjiSP0vskl"
     giphy_endpoint = "http://api.giphy.com/v1/gifs/search"
 
+
     def get_gif_url(query):
 
         api_key = "fXAagJPL2EA8yvLp2Dpx9SbjiSP0vskl"
@@ -69,7 +68,7 @@ def run_discord_bot():
         print(f"Logged in as {client.user}")
 
     @client.event
-    async def gif_response(message):
+    async def on_message(message):
         if message.content.startswith('gif ') and message.content.endswith('.'):
             search_term = message.content[4:-1]
             gif_url = get_gif_url(search_term)
