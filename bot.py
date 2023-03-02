@@ -23,7 +23,7 @@ def run_discord_bot():
             return None
 
         elif message.content.lower().startswith("ege"):
-            await message.channel.send("ege = GAY TROLOLOLOLOOOO!!!!!")
+            await message.channel.send("ege")
 
         elif message.content[0] == '?' or message.content[0]== '!' or message.content[0] == '.' or message.content[0] == '$' or message.content[0] == '@' or message.content[0] == '#':
             message.content = message.content[1:]
@@ -37,7 +37,7 @@ def run_discord_bot():
             await message.channel.send('goca yarrag')
 
         elif 'kuzey' in message.content.lower():
-            await message.channel.send('ehh eh uhm actually the ending to "Avengers: Endgame" is a literary gem since the direc- *punches face* *puts dick in mouth* *ligma cock*')
+            await message.channel.send('ehh eh uhm actually the ending to "Avengers: Endgame" is a literary gem since the direc- *punches face*')
 
         elif 'talha' in message.content.lower():
             await message.channel.send("I'm nobody. I'm nowhere. I drive. I. Am. Him.")
@@ -75,7 +75,7 @@ def run_discord_bot():
             if gif_url:
                 await message.channel.send(gif_url)
             else:
-                await message.channel.send('Oyle bir gif yok aptal maymun')
+                await message.channel.send('There is no such gif.')
 
     client.run(TOKEN)
 
