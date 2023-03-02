@@ -9,3 +9,6 @@ A test bot for discord
 # V2 - Responds to messages that request gif responses:
 -  the message format must be in "gif x." , where 'x' is the desired search term for the gif
 -  uses the GIPHY API instead of the regular Tenor gifs , so results may differ from the search results within the Discord gifs section
+-  Ragged will always send the first gif result
+-  if Ragged can't send the first result after a search , it will instead send an error message
+-  Ragged will always send the original version of the gif search result
