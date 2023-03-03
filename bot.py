@@ -1,7 +1,6 @@
 import discord
 import requests
 import json
-import os
 
 def run_discord_bot():
     TOKEN = 'MTA4MDQxNjY2NTc0Mjg3NjgwMw.G18JAE.ewOtI_aVfMxJS3SenLaeK-0JYqdujoFL8BJ75U'
@@ -23,7 +22,7 @@ def run_discord_bot():
             return None
 
         elif message.content.lower().startswith("ege"):
-            await message.channel.send("ege")
+            await message.channel.send("ege abi cok yasa")
 
         elif message.content[0] == '?' or message.content[0]== '!' or message.content[0] == '.' or message.content[0] == '$' or message.content[0] == '@' or message.content[0] == '#':
             message.content = message.content[1:]
@@ -47,7 +46,6 @@ def run_discord_bot():
     api_key = "fXAagJPL2EA8yvLp2Dpx9SbjiSP0vskl"
     giphy_endpoint = "http://api.giphy.com/v1/gifs/search"
 
-
     def get_gif_url(query):
 
         api_key = "fXAagJPL2EA8yvLp2Dpx9SbjiSP0vskl"
@@ -68,14 +66,14 @@ def run_discord_bot():
         print(f"Logged in as {client.user}")
 
     @client.event
-    async def on_message(message):
+    async def gif_response(message):
         if message.content.startswith('gif ') and message.content.endswith('.'):
             search_term = message.content[4:-1]
             gif_url = get_gif_url(search_term)
             if gif_url:
                 await message.channel.send(gif_url)
             else:
-                await message.channel.send('There is no such gif.')
+                await message.channel.send('Unfortunately, there is no such gif.')
 
     client.run(TOKEN)
 
