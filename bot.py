@@ -1,82 +1,29 @@
 import discord
-import requests
+import bot
 import json
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+intents = discord.Intents.default()
+intents.message_content = True
+client = discord.Client(intents=intents)
 
 def run_discord_bot():
-    TOKEN = 'MTA4MDQxNjY2NTc0Mjg3NjgwMw.GJHKJu.BuHqllWMa0c-pS7ECRGgExtKQxwf4j4rjlg2UE'
+    """
+    Runs the Discord bot using the token from the environment variable.
 
-    intents = discord.Intents.default()
-    intents.message_content = True
+    This function initializes a Discord client with the specified intents
+    and runs the bot using the token retrieved from the environment variable
+    'DISCORD_TOKEN'.
 
-    client = discord.Client(intents=intents)
+    Environment Variables:
+    - DISCORD_TOKEN: The token used to authenticate the Discord bot.
 
-    @client.event
-    async def on_ready():
-        print(f'We have logged in as {client.user}')
+    Raises:
+    - RuntimeError: If the 'DISCORD_TOKEN' environment variable is not set.
+    """
 
-    @client.event
-    async def on_message(message):
-        if message.author == client.user:
-            return
-        if message.content.startswith('gif ') and message.content.endswith('.'):
-            return None
+    discord_token = os.getenv("DISCORD_TOKEN")
 
-        elif message.content.lower().startswith("ege"):
-            await message.channel.send("ege abi cok yasa")
-
-        elif message.content[0] == '?' or message.content[0]== '!' or message.content[0] == '.' or message.content[0] == '$' or message.content[0] == '@' or message.content[0] == '#':
-            message.content = message.content[1:]
-            await message.channel.send(f'Simdi sen {message.content} diyince kendini zeki mi saniyon gofikt')
-
-        elif message.content[0] == '"' and message.content[-1] == '"' or message.content[0] == "'" and message.content[-1] == "'":
-            message.content = message.content[1:-1]
-            await message.channel.send(f'Kardesim, bu kasaba 2 kesme isareti icin cok buyuk. Su sekilde yaz:\n{message.content}')
-
-        elif 'ender abi' in message.content.lower():
-            await message.channel.send('goca yarrag')
-
-        elif 'kuzey' in message.content.lower():
-            await message.channel.send('ehh eh uhm actually the ending to "Avengers: Endgame" is a literary gem since the direc- *punches face*')
-
-        elif 'talha' in message.content.lower():
-            await message.channel.send("I'm nobody. I'm nowhere. I drive. I. Am. Him.")
-
-
-
-    api_key = "fXAagJPL2EA8yvLp2Dpx9SbjiSP0vskl"
-    giphy_endpoint = "http://api.giphy.com/v1/gifs/search"
-
-    def get_gif_url(query):
-
-        api_key = "fXAagJPL2EA8yvLp2Dpx9SbjiSP0vskl"
-
-        url = f"http://api.giphy.com/v1/gifs/search?q={query}&api_key={api_key}&limit=1"
-
-        response = requests.get(url)
-
-        if response.status_code == 200:
-            data = json.loads(response.text)
-            gif_url = data["data"][0]["images"]["original"]["url"]
-            return gif_url
-        else:
-            return None
-
-    @client.event
-    async def on_ready():
-        print(f"Logged in as {client.user}")
-
-    @client.event
-    async def gif_response(message):
-        if message.content.startswith('gif ') and message.content.endswith('.'):
-            search_term = message.content[4:-1]
-            gif_url = get_gif_url(search_term)
-            if gif_url:
-                await message.channel.send(gif_url)
-            else:
-                await message.channel.send('Unfortunately, there is no such gif.')
-
-    client.run(TOKEN)
-
-
-
-
+    client.run(discord_token)
