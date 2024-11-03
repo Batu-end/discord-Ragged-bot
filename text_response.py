@@ -1,7 +1,7 @@
 import random
 
-# List of gif links to be used in for sigma gifs.
-gif_list = [
+# batu query'lerinde kullanilacak response listesi.
+gif_list_batu = [
     'https://tenor.com/view/thomas-shelby-gif-23960893',
     'https://tenor.com/view/standing-thomas-shelby-peaky-blinders-gif-27268060',
     'https://tenor.com/view/john-wick-keanu-reeves-serious-walking-im-coming-for-you-gif-17750404',
@@ -10,6 +10,15 @@ gif_list = [
     'https://tenor.com/view/american-psycho-smoke-sigma-gif-26186111',
     'https://tenor.com/view/cillianmurphygun-cillianmurphy-jazmincoded-gif-3811002643797340103',
     'https://tenor.com/view/fight-club-quotes-gif-27239086'
+]
+
+gif_list_alp = [
+    '# Alp, shcrift "A." Stands for:\n# "***Almighty.***"',
+    'https://tenor.com/view/type-soul-roblox-meme-discord-bleach-gif-9808725648483849146',
+    'https://tenor.com/view/type-soul-setroboomin-notdave-gif-5768095090520187917',
+    'https://tenor.com/view/type-soul-type-soul-bleach-anime-gif-8886355975964474040',
+    'https://tenor.com/view/hawk-tuah-hakuda-type-soul-happy-meal-gifs-for-the-fellas-for-real-gif-18418037434358848994',
+    'https://tenor.com/view/im-not-addicted-i-can-stop-stan-marsh-marvin-marsh-south-park-s18e6-gif-20324048'
 ]
 
 async def handle_text_response(message):
@@ -46,10 +55,10 @@ async def handle_text_response(message):
         await message.channel.send(f'Kardesim, bu kasaba 2 kesme isareti icin cok buyuk. Su sekilde yaz:\n{message.content}')
 
     elif 'batu' in message.content.lower():
-        await message.channel.send(random.choice(gif_list))
+        await message.channel.send(random.choice(gif_list_batu))
 
     elif 'alp' in message.content.lower():
-        await message.channel.send('# Alp, shcrift "A." Stands for:\n# "***Almighty.***"')
+        await message.channel.send(random.choice(gif_list_alp))
 
     elif 'kuzey' in message.content.lower():
         await message.channel.send('ehh eh uhm actually the ending to "*insert niche movie that noone cares about*" is a literary gem since the direc- *punches face*')
