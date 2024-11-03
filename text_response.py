@@ -12,6 +12,7 @@ gif_list_batu = [
     'https://tenor.com/view/fight-club-quotes-gif-27239086'
 ]
 
+# alp query'lerinde kullanilacak response listesi.
 gif_list_alp = [
     '# Alp, shcrift "A." Stands for:\n# "***Almighty.***"',
     'https://tenor.com/view/type-soul-roblox-meme-discord-bleach-gif-9808725648483849146',
