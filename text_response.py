@@ -60,5 +60,5 @@ async def handle_text_response(message):
     elif 'berke' in message.content.lower():
         await message.channel.send('https://tenor.com/view/dog-nose-butterfly-dog-puppy-peaceful-gif-14700589898488542320')
 
-    elif 'talha' in message.content.lower():
-        await message.channel.send("I'm nobody. I'm driving.(ehliyetim yok)")
+    elif 'efe' in message.content.lower():
+        await message.channel.send("is that.. ***dante?***")
