@@ -55,7 +55,10 @@ async def handle_text_response(message):
         await message.channel.send('ehh eh uhm actually the ending to "*insert niche movie that noone cares about*" is a literary gem since the direc- *punches face*')
 
     elif 'talha' in message.content.lower():
-        await message.channel.send("I'm nobody. I'm driving.(ehliyetim yok)")
+        await message.channel.send("I'm nobody. I'm driving.*(ehliyetim yok)*")
     
     elif 'berke' in message.content.lower():
-        await message.channel.send('I am the one who knocks.')
+        await message.channel.send('https://tenor.com/view/dog-nose-butterfly-dog-puppy-peaceful-gif-14700589898488542320')
+
+    elif 'talha' in message.content.lower():
+        await message.channel.send("I'm nobody. I'm driving.(ehliyetim yok)")
