@@ -49,7 +49,7 @@ async def handle_text_response(message):
         await message.channel.send(random.choice(gif_list))
 
     elif 'alp' in message.content.lower():
-        await message.channel.send('# Alp, shcrift "A." Stands for:\n# "Almighty."')
+        await message.channel.send('# Alp, shcrift "A." Stands for:\n# "***Almighty.***"')
 
     elif 'kuzey' in message.content.lower():
         await message.channel.send('ehh eh uhm actually the ending to "*insert niche movie that noone cares about*" is a literary gem since the direc- *punches face*')
