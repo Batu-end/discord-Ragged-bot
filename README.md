@@ -1,5 +1,5 @@
 # discord-Ragged-bot
-A test bot for discord
+A bot for discord, originally made to work with gifs.
 
 # V1 - Responds with specified messages, to messages that:
 -  start with a certain character(s)
