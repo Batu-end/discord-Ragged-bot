@@ -12,3 +12,7 @@ A bot for discord, originally made to work with gifs.
 -  Ragged will always send the first gif result
 -  if Ragged can't send the first result after a search , it will instead send an error message
 -  Ragged will always send the original version of the gif search result
+
+# V3 - Uses AWS cloud services to run smoothly, 24/7, on demand and without utilizing local computing power.
+- Uses the free t2.micro EC2 tier, attached with default EBS volume.
+- Based in the US region, within the us-west-1 Availability zone.
