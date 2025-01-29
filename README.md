@@ -16,3 +16,6 @@ A bot for discord, originally made to work with gifs.
 # V3 - Uses AWS cloud services to run smoothly, 24/7, on demand and without utilizing local computing power.
 - Uses the free t2.micro EC2 tier, attached with default EBS volume.
 - Based in the US region, within the us-west-1 Availability zone.
+
+# V4 - Ragged had trouble with private keys, as being new to developing with private keys myself.
+- Now private keys are actually stored privately within the cloud, which meant that the repo can now be public.
