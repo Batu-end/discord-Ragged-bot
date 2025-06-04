@@ -37,8 +37,7 @@ A bot originally designed to respond with GIFs and text messages based on specif
   - Timestamp
   - Message length
   - Message content
-- Stores the logged data in a local SQLite database (`data/message_logs.db`).
-- Enables future analytics such as tracking user activity, message frequency, and potential mood or behavior analysis.
+- Stores the logged data in a local SQLite database.
 - Ensures data privacy by storing logs only locally and excluding bot messages.
 
 ---
