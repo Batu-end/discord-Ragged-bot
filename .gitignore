@@ -1,3 +1,5 @@
 venv/
-
 data/
+/shelf/
+/workspace.xml/
+/.env
