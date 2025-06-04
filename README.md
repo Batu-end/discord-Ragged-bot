@@ -46,3 +46,7 @@ A bot originally designed to respond with GIFs and text messages based on specif
 
 - This bot is open source and built to be extensible.
 - Contributions and/or suggestions are welcome.
+
+---
+
+# > ⚠️ Due to pricing limitations and availability thresholds on AWS, Ragged is not currently running 24/7. However, it can be manually started anytime as needed.
