@@ -1,21 +1,49 @@
 # discord-Ragged-bot
-A bot for discord, originally made to work with gifs.
 
-# V1 - Responds with specified messages, to messages that:
--  start with a certain character(s)
--  contain a certain word anywhere within the message
--  start and end with the same characters
+A bot originally designed to respond with GIFs and text messages based on specific triggers.
 
-# V2 - Responds to messages that request gif responses:
--  the message format must be in "gif x." , where 'x' is the desired search term for the gif
--  uses the GIPHY API instead of the regular Tenor gifs , so results may differ from the search results within the Discord gifs section
--  Ragged will always send the first gif result
--  if Ragged can't send the first result after a search , it will instead send an error message
--  Ragged will always send the original version of the gif search result
+---
 
-# V3 - Uses AWS cloud services to run smoothly, 24/7, on demand and without utilizing local computing power.
-- Uses the free t2.micro EC2 tier, attached with default EBS volume.
-- Based in the US region, within the us-west-1 Availability zone.
+## Features by Version
 
-# V4 - Ragged had trouble with private keys, as being new to developing with private keys myself.
-- Now private keys are actually stored privately within the cloud, which meant that the repo can now be public.
+### V1 — Basic Message Responses
+- Responds with specified messages when:
+  - Messages **start with** certain character(s).
+  - Messages **contain** specific words anywhere within the text.
+  - Messages **start and end** with the same characters.
+
+### V2 — GIF Search & Response
+- Responds to messages formatted as `"gif x."` where `x` is the desired GIF search term.
+- Uses the **GIPHY API** instead of Tenor for GIF searches, so results may differ from Discord's built-in GIFs.
+- Always sends the **first GIF result** from the search.
+- If the first result cannot be sent, Ragged replies with an error message.
+- Sends the **original version** of the GIF found via GIPHY.
+
+### V3 — Cloud Deployment & 24/7 Availability
+- Runs on **AWS free tier t2.micro EC2 instance**, enabling smooth, 24/7 operation.
+- Uses default EBS volume for storage.
+- Hosted in the **US West (us-west-1) Availability Zone**.
+- Offloads compute to the cloud, minimizing local resource usage.
+
+### V4 — Secure Private Key Management
+- Private keys and sensitive credentials are securely stored **within the cloud environment**.
+- This enhancement allows the repository to be **public without risking key exposure**.
+- Improved security and development workflow for handling sensitive data.
+
+### V5 — User Message Activity Logging
+- Logs basic statistics for every user message. DON'T FRET! Everything being recorded is under Discord guidelines and stored offline.
+  - User ID
+  - Channel ID
+  - Timestamp
+  - Message length
+  - Message content
+- Stores the logged data in a local SQLite database (`data/message_logs.db`).
+- Enables future analytics such as tracking user activity, message frequency, and potential mood or behavior analysis.
+- Ensures data privacy by storing logs only locally and excluding bot messages.
+
+---
+
+## Notes
+
+- This bot is open source and built to be extensible.
+- Contributions and/or suggestions are welcome.
